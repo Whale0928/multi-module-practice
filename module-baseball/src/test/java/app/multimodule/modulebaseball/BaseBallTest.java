@@ -52,4 +52,21 @@ public class BaseBallTest {
 
 		Assertions.assertTrue(strikeZones.contains(input));
 	}
+
+	@Test
+	@DisplayName("수를 입력받아 볼을 판단할 수 있다.")
+	void is_ball() {
+		List<Integer> strikeZones = new LinkedList<>() {
+			{
+				add(1);
+				add(2);
+				add(3);
+			}
+		};
+
+		Integer input = 4;
+
+		Assertions.assertFalse(strikeZones.contains(input));
+	}
+
 }
