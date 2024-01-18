@@ -10,6 +10,7 @@ version = '0.0.1-SNAPSHOT'
 
 java {
     sourceCompatibility = '21'
+    targetCompatibility = '21'
 }
 
 configurations {
@@ -37,3 +38,9 @@ tasks.named('test') {
     useJUnitPlatform()
 }
 tasks.register("prepareKotlinBuildScriptModel") {}
+
+//common 모듈은 메인 클래스가 없기 때문에 true로 두고 실행하면 Main폴더가 없어서 에러가 발생한다.
+tasks.bootJar { enabled = false }
+// ---.plain.jar를 만들고 싶으면 아래와 같이 설정한다.
+// 그냥 .jar는 서버를 실행 시키기 때문.
+tasks.jar { enabled = true }

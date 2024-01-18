@@ -22,7 +22,6 @@ public class BaseEntity {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
-
 	@Column(updatable = false) // createdDate는 생성시간이므로 수정이 불가능하도록 설정
 	private String createdBy;
 	@Column(updatable = false) // createdDate는 생성시간이므로 수정이 불가능하도록 설정
