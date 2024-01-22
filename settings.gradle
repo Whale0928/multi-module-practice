@@ -2,4 +2,4 @@ rootProject.name = 'multi-module-practice'
 
 include 'module-api'
 include 'module-common'
-include 'module-baseball'
+include 'module-nextstep'
