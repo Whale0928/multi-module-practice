@@ -13,9 +13,7 @@ public class StringAddCalculator {
 
 		String delimiter = getDelimiter(input);
 		int customIndexAt = getCustomIndexAt(input);
-
 		String[] numbers = getIntArrays(input, delimiter, customIndexAt);
-
 		if (numbers.length < 1)
 			return 0;
 
@@ -37,26 +35,23 @@ public class StringAddCalculator {
 	}
 
 	public static int getCustomIndexAt(String input) {
-
 		return input.indexOf("\n");
 	}
 
 	public static String getDelimiter(String input) {
-
-		int startAt = -1;
-		int endAt = -1;
-
 		if (input.startsWith("//")) {
-			startAt = 2;
-			endAt = input.indexOf("\n");
-
-			if (endAt == -1)
-				throw new RuntimeException("구분자가 잘못되었습니다.");
-			String substring = input.substring(startAt, endAt);
-			return substring + "|" + DEFAULT_DELIMITER;
+			return customDelimiter(input);
 		}
-
 		return DEFAULT_DELIMITER;
+	}
+
+	public static String customDelimiter(String input) {
+		int startAt = 2;
+		int endAt = input.indexOf("\n");
+		if (endAt == -1)
+			throw new RuntimeException("구분자가 잘못되었습니다.");
+		String substring = input.substring(startAt, endAt);
+		return substring + "|" + DEFAULT_DELIMITER;
 	}
 
 }
