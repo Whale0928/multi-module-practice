@@ -1,4 +1,4 @@
-package app.multimodule.modulenextstep;
+package app.multimodule.modulenextstep.tdd;
 
 import java.util.Arrays;
 import java.util.Objects;

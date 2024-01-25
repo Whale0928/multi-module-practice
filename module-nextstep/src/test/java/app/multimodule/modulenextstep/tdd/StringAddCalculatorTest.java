@@ -1,12 +1,12 @@
-package app.multimodule.modulenextstep;
+package app.multimodule.modulenextstep.tdd;
 
 import org.junit.jupiter.api.Test;
 
-import static app.multimodule.modulenextstep.StringAddCalculator.DEFAULT_DELIMITER;
-import static app.multimodule.modulenextstep.StringAddCalculator.getCustomIndexAt;
-import static app.multimodule.modulenextstep.StringAddCalculator.getDelimiter;
-import static app.multimodule.modulenextstep.StringAddCalculator.getIntArrays;
-import static app.multimodule.modulenextstep.StringAddCalculator.splitAndSum;
+import static app.multimodule.modulenextstep.tdd.StringAddCalculator.DEFAULT_DELIMITER;
+import static app.multimodule.modulenextstep.tdd.StringAddCalculator.getCustomIndexAt;
+import static app.multimodule.modulenextstep.tdd.StringAddCalculator.getDelimiter;
+import static app.multimodule.modulenextstep.tdd.StringAddCalculator.getIntArrays;
+import static app.multimodule.modulenextstep.tdd.StringAddCalculator.splitAndSum;
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.assertj.core.api.Assertions.assertThatThrownBy;
 
